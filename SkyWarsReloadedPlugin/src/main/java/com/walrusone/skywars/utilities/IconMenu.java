@@ -42,8 +42,7 @@ public class IconMenu {
         player.openInventory(inventory);
     }
     
-    @SuppressWarnings("deprecation")
-	public void update(Player player) {
+    public void update(Player player) {
     	InventoryView inventory = player.getOpenInventory();
     	if (inventory != null) {
             for (int iii = 0; iii < this.optionIcons.length; iii++) {

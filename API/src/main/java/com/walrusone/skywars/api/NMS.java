@@ -9,7 +9,6 @@ import org.bukkit.World;
 import org.bukkit.FireworkEffect.Type;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.scoreboard.ScoreboardManager;
 
 public interface NMS {
 
