@@ -113,7 +113,7 @@ permissions:
     description: Allows a player to use the games command.
     default: op
   swr.list: 
-    description: Aloows a player to use the list command.
+    description: Allows a player to use the list command.
     default: op
   swr.endgame: 
     description: Allows a player to use the endgame command.
