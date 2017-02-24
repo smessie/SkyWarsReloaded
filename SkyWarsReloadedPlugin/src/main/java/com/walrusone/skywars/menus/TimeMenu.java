@@ -135,6 +135,19 @@ public class TimeMenu {
     		}
     	}
         
+    	if(votesForDawn == 0) {
+    		votesForDawn = 1;
+    	}
+    	if(votesForNoon == 0) {
+    		votesForNoon = 1;
+    	}
+    	if(votesForDusk == 0) {
+    		votesForDusk = 1;
+    	}
+    	if(votesForMidnight == 0) {
+    		votesForMidnight = 1;
+    	}
+    	
     	if (gamePlayer.getP() != null) {
             List<String> loreList = Lists.newLinkedList();
             SkyWarsReloaded.getIC().setOption(

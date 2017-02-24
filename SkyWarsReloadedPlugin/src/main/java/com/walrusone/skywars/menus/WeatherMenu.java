@@ -135,6 +135,18 @@ public class WeatherMenu {
     		}
     	}
         
+    	if(votesForSunny == 0) {
+    		votesForSunny = 1;
+    	}
+    	if(votesForRain == 0) {
+    		votesForRain = 1;
+    	}
+    	if(votesForThunder == 0) {
+    		votesForThunder = 1;
+    	}
+    	if(votesForSnow == 0) {
+    		votesForSnow = 1;
+    	}
     	if (gamePlayer.getP() != null) {
             List<String> loreList = Lists.newLinkedList();
             SkyWarsReloaded.getIC().setOption(

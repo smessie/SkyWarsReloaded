@@ -136,6 +136,19 @@ public class JumpMenu {
     			votesForGod++;
     		}
     	}
+    	
+    	if(votesForNormal == 0) {
+    		votesForNormal = 1;
+    	}
+    	if(votesForHigh == 0) {
+    		votesForHigh = 1;
+    	}
+    	if(votesForSuper == 0) {
+    		votesForSuper = 1;
+    	}
+    	if(votesForGod == 0) {
+    		votesForGod = 1;
+    	}
         
     	if (gamePlayer.getP() != null) {
             List<String> loreList = Lists.newLinkedList();
