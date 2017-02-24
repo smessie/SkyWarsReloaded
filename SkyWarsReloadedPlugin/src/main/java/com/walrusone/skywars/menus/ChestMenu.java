@@ -122,6 +122,16 @@ public class ChestMenu {
     		} 
     	}
         
+    	if(votesForBasic == 0) {
+    		votesForBasic = 1;
+    	}
+    	if(votesForNormal == 0) {
+    		votesForNormal = 1;
+    	}
+    	if(votesForOP == 0) {
+    		votesForOP = 1;
+    	}
+    	
     	if (gamePlayer.getP() != null) {
             List<String> loreList = Lists.newLinkedList();
             SkyWarsReloaded.getIC().setOption(
