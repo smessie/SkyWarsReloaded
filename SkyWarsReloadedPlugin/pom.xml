@@ -128,5 +128,37 @@
             <type>jar</type>
             <optional>true</optional>
         </dependency>
+       <dependency>
+           <groupId>com.walrusone.skywars</groupId>
+           <artifactId>skywarsreloadedplugin-v1_9_R2</artifactId>
+           <version>v1_9_R2</version>
+           <scope>compile</scope>
+           <type>jar</type>
+           <optional>true</optional>
+       </dependency>
+       <dependency>
+           <groupId>com.walrusone.skywars</groupId>
+           <artifactId>skywarsreloadedplugin-v1_10_R1</artifactId>
+           <version>v1_10_R1</version>
+           <scope>compile</scope>
+           <type>jar</type>
+           <optional>true</optional>
+       </dependency>
+       <dependency>
+           <groupId>com.walrusone.skywars</groupId>
+           <artifactId>skywarsreloadedplugin-v1_11_R1</artifactId>
+           <version>v1_11_R1</version>
+           <scope>compile</scope>
+           <type>jar</type>
+           <optional>true</optional>
+       </dependency>
+       <dependency>
+           <groupId>com.walrusone.skywars</groupId>
+           <artifactId>skywarsreloadedplugin-v1_12_R1</artifactId>
+           <version>v1_12_R1</version>
+           <scope>compile</scope>
+           <type>jar</type>
+           <optional>true</optional>
+       </dependency>
    </dependencies>
 </project>

@@ -13,6 +13,10 @@
         <module name="skywarsreloadedplugin-v1_8_R1" />
         <module name="skywarsreloadedplugin-v1_8_R2" />
         <module name="skywarsreloadedplugin-v1_8_R3" />
+        <module name="v1_10_R1" />
+        <module name="v1_11_R1" />
+        <module name="v1_12_R1" />
+        <module name="v1_9_R2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,6 +28,10 @@
       <module name="skywarsreloadedplugin-v1_8_R1" target="1.5" />
       <module name="skywarsreloadedplugin-v1_8_R2" target="1.5" />
       <module name="skywarsreloadedplugin-v1_8_R3" target="1.5" />
+      <module name="v1_10_R1" target="1.5" />
+      <module name="v1_11_R1" target="1.5" />
+      <module name="v1_12_R1" target="1.5" />
+      <module name="v1_9_R2" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

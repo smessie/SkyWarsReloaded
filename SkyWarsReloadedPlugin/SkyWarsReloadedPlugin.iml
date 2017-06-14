@@ -26,5 +26,9 @@
     <orderEntry type="module" module-name="skywarsreloadedplugin-v1_8_R1" />
     <orderEntry type="module" module-name="skywarsreloadedplugin-v1_8_R2" />
     <orderEntry type="module" module-name="skywarsreloadedplugin-v1_8_R3" />
+    <orderEntry type="module" module-name="v1_9_R2" />
+    <orderEntry type="module" module-name="v1_10_R1" />
+    <orderEntry type="module" module-name="v1_11_R1" />
+    <orderEntry type="module" module-name="v1_12_R1" />
   </component>
 </module>
