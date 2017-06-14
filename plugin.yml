@@ -1,6 +1,6 @@
 name: SkyWarsReloaded
 main: com.walrusone.skywars.SkyWarsReloaded
-version: 3.1.0
+version: 3.1.1
 depend: [Vault]
 authors: [zRA1Nz, Walrusone, GTA5Racer, smessie]
 softdepend: [Multiverse-Core]
