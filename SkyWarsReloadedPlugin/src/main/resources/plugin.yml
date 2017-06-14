@@ -1,6 +1,6 @@
 name: SkyWarsReloaded
 main: com.walrusone.skywars.SkyWarsReloaded
-version: 2.8
+version: ${project.version}
 
 depend: [Vault]
 softdepend: [Multiverse-Core]

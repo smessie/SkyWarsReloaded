@@ -168,7 +168,6 @@ public class SkyWarsReloaded extends JavaPlugin implements PluginMessageListener
         
         getCommand("global").setExecutor(new CommandExecutor() {
         	
-            @Override
             public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
             	boolean hasPerm = false;
         		if (!(sender instanceof Player)) {
@@ -468,7 +467,6 @@ public class SkyWarsReloaded extends JavaPlugin implements PluginMessageListener
         }
     }
     
-    @Override
  	public void onPluginMessageReceived(String channel, Player player, byte[] message) {
  		if (!channel.equals("BungeeCord")) {
  			return;
@@ -493,9 +491,11 @@ public class SkyWarsReloaded extends JavaPlugin implements PluginMessageListener
     private void getSWRDatabase() {
     	try {
 			db = new Database();
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-		}
+		} catch (SQLException e) {
+    	    e.printStackTrace();
+        }
     	try {
 			db.createTables();
 		} catch (IOException e) {

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SkyWarsReloadedPlugin" />
+        <module name="skywarsreloadedplugin-api" />
+        <module name="skywarsreloadedplugin-v1_7_R3" />
+        <module name="skywarsreloadedplugin-v1_7_R4" />
+        <module name="skywarsreloadedplugin-v1_8_R1" />
+        <module name="skywarsreloadedplugin-v1_8_R2" />
+        <module name="skywarsreloadedplugin-v1_8_R3" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SkyWarsReloaded" target="1.5" />
+      <module name="SkyWarsReloadedPlugin" target="1.8" />
+      <module name="skywarsreloadedplugin-api" target="1.5" />
+      <module name="skywarsreloadedplugin-v1_7_R3" target="1.5" />
+      <module name="skywarsreloadedplugin-v1_7_R4" target="1.5" />
+      <module name="skywarsreloadedplugin-v1_8_R1" target="1.5" />
+      <module name="skywarsreloadedplugin-v1_8_R2" target="1.5" />
+      <module name="skywarsreloadedplugin-v1_8_R3" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

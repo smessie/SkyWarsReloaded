@@ -16,7 +16,7 @@
       <artifactId>craftbukkit</artifactId>
       <version>1.7.10-R0.1-SNAPSHOT</version>
       <scope>system</scope>
-      <systemPath>${project.basedir}/lib/craftbukkit-1.7.10-R0.1.jar</systemPath>
+      <systemPath>${project.basedir}/../SkyWarsReloadedPlugin/lib/spigot-1.7.10.jar</systemPath>
       <type>jar</type>
       <optional>true</optional>
     </dependency>
