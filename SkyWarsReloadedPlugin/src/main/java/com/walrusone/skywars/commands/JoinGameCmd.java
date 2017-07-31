@@ -1,5 +1,6 @@
 package com.walrusone.skywars.commands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -9,6 +10,8 @@ import com.walrusone.skywars.game.Game;
 import com.walrusone.skywars.game.GamePlayer;
 import com.walrusone.skywars.game.Game.GameState;
 import com.walrusone.skywars.utilities.Messaging;
+
+import java.util.*;
 
 
 public class JoinGameCmd extends BaseCmd { 
@@ -73,7 +76,9 @@ public class JoinGameCmd extends BaseCmd {
 	private Game findGame() {
 		Game game = null;
 		int highest = 0;
-		for (Game g: SkyWarsReloaded.getGC().getGames()) {
+        List<Game> games = SkyWarsReloaded.getGC().getGames();
+        Collections.shuffle(games);
+		for (Game g: games) {
 			if (highest <= g.getPlayers().size() && g.getState() == GameState.PREGAME && !g.isFull()) {
 				highest = g.getPlayers().size();
 				game = g;

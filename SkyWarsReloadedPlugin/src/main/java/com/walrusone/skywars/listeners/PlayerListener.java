@@ -1,9 +1,6 @@
 package com.walrusone.skywars.listeners;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Random;
+import java.util.*;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -334,7 +331,9 @@ public class PlayerListener implements Listener {
     private Game findGame() {
 		Game game = null;
 		int highest = 0;
-		for (Game g: SkyWarsReloaded.getGC().getGames()) {
+		List<Game> games = SkyWarsReloaded.getGC().getGames();
+		Collections.shuffle(games);
+		for (Game g: games) {
 			if (highest <= g.getPlayers().size() && g.getState() == GameState.PREGAME && !g.isFull()) {
 				highest = g.getPlayers().size();
 				game = g;

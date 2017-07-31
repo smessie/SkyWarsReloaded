@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
+import com.walrusone.skywars.api.PlaceHolders;
 import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.Economy;
 
@@ -267,6 +268,10 @@ public class SkyWarsReloaded extends JavaPlugin implements PluginMessageListener
         }
         
         finishedStartup = true;
+
+        if(Bukkit.getPluginManager().isPluginEnabled("PlaceHolderAPI")) {
+            new PlaceHolders(this).hook();
+        }
     } 
     
 	public void onDisable() {

@@ -2,10 +2,7 @@ package com.walrusone.skywars.controllers;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -33,6 +30,7 @@ public class GameController {
 
 	public Game findGame() {
 		ArrayList<Game> games = getGames();
+        Collections.shuffle(games);
 		for (int i = 0; i < getGames().size(); i++) {
 			if (!games.get(i).isFull() && games.get(i).getState() == GameState.PREGAME) {
 				return games.get(i);
@@ -277,7 +275,7 @@ public class GameController {
 	 }
 
 	 public ArrayList<Game> getGames() {
-			ArrayList<Game> games = new ArrayList<Game>();
+			ArrayList<Game> games = new ArrayList<>();
 			for (Game g: gameNumbers.values()) {
 				games.add(g);
 			}
