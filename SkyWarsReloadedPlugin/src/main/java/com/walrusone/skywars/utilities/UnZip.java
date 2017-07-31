@@ -31,8 +31,17 @@ public class UnZip {
         while (entry != null) {
             String filePath = destDirectory + File.separator + entry.getName();
             if (!entry.isDirectory()) {
-                // if the entry is a file, extracts it
-                extractFile(zipIn, filePath);
+                // if the entry is a file, extracts itnew File(newFile.getParent()).mkdirs();
+
+                byte[] buffer = new byte[1024];
+                String fileName = entry.getName();
+                File newFile = new File(destDirectory + File.separator + fileName);
+                FileOutputStream fos = new FileOutputStream(newFile);int len;
+                while ((len = zipIn.read(buffer)) > 0) {
+                    fos.write(buffer, 0, len);
+                }
+
+                fos.close();
             } else {
                 // if the entry is a directory, make the directory
                 File dir = new File(filePath);
