@@ -216,7 +216,7 @@ sqldatabase:
   database: database
   username: username
   password: password
-resaveDefaultMaps: true
+resaveDefaultMaps: false
 bungeeMode:
   enabled: false
   bungeeServerName: skywars
