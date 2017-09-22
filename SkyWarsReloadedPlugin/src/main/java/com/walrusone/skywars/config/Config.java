@@ -1151,42 +1151,42 @@ public class Config {
 		}
 		
 		if (playerJoinLobby == null) {
-			playerJoinLobby =  Sound.SLIME_WALK2;
+			playerJoinLobby =  Sound.valueOf("ENTITY_SLIME_JUMP");
 			SkyWarsReloaded.get().getLogger().info("playerJoinLobby sound in config is not valid, using default sound");
 		}
 		
 		if (playerLeaveLobby == null) {
-			playerLeaveLobby =  Sound.SLIME_ATTACK;
+			playerLeaveLobby =  Sound.valueOf("ENTITY_SLIME_ATTACK");
 			SkyWarsReloaded.get().getLogger().info("playerLeaveLobby sound in config is not valid, using default sound");
 		}
 		
 		if (playerDeath == null) {
-			playerDeath =  Sound.AMBIENCE_THUNDER;
+			playerDeath =  Sound.valueOf("ENTITY_LIGHTNING_THUNDER");
 			SkyWarsReloaded.get().getLogger().info("playerDeath sound in config is not valid, using default sound");
 		}
 		
 		if (playerWin == null) {
-			playerWin =  Sound.FIREWORK_LARGE_BLAST;
+			playerWin =  Sound.valueOf("ENTITY_FIREWORK_LARGE_BLAST");
 			SkyWarsReloaded.get().getLogger().info("playerWin sound in config is not valid, using default sound");
 		}
 		
 		if (opChestVote == null) {
-			opChestVote =  Sound.CHEST_OPEN;
+			opChestVote =  Sound.valueOf("BLOCK_CHEST_OPEN");
 			SkyWarsReloaded.get().getLogger().info("opChestVote sound in config is not valid, using default sound");
 		}
 		
 		if (timeVote == null) {
-			timeVote =  Sound.FUSE;
+			timeVote =  Sound.valueOf("ENTITY_TNT_PRIMED");
 			SkyWarsReloaded.get().getLogger().info("timeVote sound in config is not valid, using default sound");
 		}
 		
 		if (weatherVote == null) {
-			weatherVote =  Sound.SPLASH;
+			weatherVote =  Sound.valueOf("ENTITY_SPLASH_POTION_THROW");
 			SkyWarsReloaded.get().getLogger().info("weatherVote sound in config is not valid, using default sound");
 		}
 		
 		if (jumpVote == null) {
-			jumpVote =  Sound.MAGMACUBE_JUMP;
+			jumpVote =  Sound.valueOf("ENTITY_MAGMACUBE_JUMP");
 			SkyWarsReloaded.get().getLogger().info("jumpVote sound in config is not valid, using default sound");
 		}
 	}
