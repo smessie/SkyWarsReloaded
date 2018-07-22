@@ -2,6 +2,7 @@ package com.walrusone.skywars.listeners;
 
 import com.google.common.collect.Maps;
 import com.walrusone.skywars.SkyWarsReloaded;
+import com.walrusone.skywars.game.GamePlayer;
 import com.walrusone.skywars.utilities.IconMenu;
 
 import org.bukkit.entity.Player;
@@ -25,21 +26,21 @@ public class IconMenuController implements Listener {
 
     public void create(Player player, String name, int size, IconMenu.OptionClickEventHandler handler) {
         if (player != null) {
-        	destroy(player);
+            destroy(player);
             menu.put(player, new IconMenu(name, size, handler));
         }
     }
 
     public IconMenu getMenu(Player player) {
-    	return menu.get(player);
+        return menu.get(player);
     }
-    
+
     public void show(Player player) {
         if (menu.containsKey(player)) {
             menu.get(player).open(player);
         }
     }
-    
+
     public void update(final Player player) {
         if (menu.containsKey(player)) {
             menu.get(player).update(player);
@@ -51,7 +52,7 @@ public class IconMenuController implements Listener {
             menu.get(player).setOption(position, icon, name, info);
         }
     }
-    
+
     public String[] getOptions(Player player) {
         if (menu.containsKey(player)) {
             return menu.get(player).getOptions();
@@ -78,19 +79,24 @@ public class IconMenuController implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = false)
     public void onInventoryClick(InventoryClickEvent event) {
-            if (event.getWhoClicked() instanceof Player) {
-            	if (SkyWarsReloaded.getPC().getPlayer(((Player) event.getWhoClicked()).getUniqueId()).isSpectating() && !menu.containsKey(event.getWhoClicked())) {
-            		event.setCancelled(true);
-            	} else if (menu.containsKey(event.getWhoClicked())) {
-                    menu.get(event.getWhoClicked()).onInventoryClick(event);
-            	}
+        if (event.getWhoClicked() instanceof Player) {
+            GamePlayer gPlayer = SkyWarsReloaded.getPC().getPlayer(event.getWhoClicked().getUniqueId());
+            if (gPlayer == null) {
+                SkyWarsReloaded.getPC().addPlayer(event.getWhoClicked().getUniqueId());
+                gPlayer = SkyWarsReloaded.getPC().getPlayer(event.getWhoClicked().getUniqueId());
             }
+            if (gPlayer.isSpectating() && !menu.containsKey(event.getWhoClicked())) {
+                event.setCancelled(true);
+            } else if (menu.containsKey(event.getWhoClicked())) {
+                menu.get(event.getWhoClicked()).onInventoryClick(event);
+            }
+        }
     }
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onInventoryClose(InventoryCloseEvent event) {
         if (event.getPlayer() instanceof Player && menu.containsKey(event.getPlayer())) {
-                destroy((Player) event.getPlayer());
+            destroy((Player) event.getPlayer());
         }
     }
 }

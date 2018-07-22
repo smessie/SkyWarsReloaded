@@ -133,7 +133,7 @@ public class GameController {
 			} else {
 				return false;
 			}
-			}
+		}
 		return false;
 	}
 
@@ -251,14 +251,14 @@ public class GameController {
 		final GameSign gs = signJoinGames.get(gameNumber);
 		gameNumbers.remove(gameNumber);
 		if (SkyWarsReloaded.getCfg().bungeeEnabled()  && !shutdown) {
-			SkyWarsReloaded.get().getServer().getScheduler().runTaskLater(SkyWarsReloaded.get(), new Runnable() {
+			SkyWarsReloaded.get().getServer().getScheduler().runTaskLaterAsynchronously(SkyWarsReloaded.get(), new Runnable() {
 				public void run() {
 					createGame();
 				  }
 			}, 40);
 		}
 		if (SkyWarsReloaded.getCfg().signJoinMode()  && !shutdown && gs != null) {
-			SkyWarsReloaded.get().getServer().getScheduler().runTaskLater(SkyWarsReloaded.get(), new Runnable() {
+			SkyWarsReloaded.get().getServer().getScheduler().runTaskLaterAsynchronously(SkyWarsReloaded.get(), new Runnable() {
 				public void run() {
 					createGame(gameNumber, gs);
 				  }
