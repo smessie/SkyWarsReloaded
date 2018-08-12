@@ -101,7 +101,7 @@ public class SkyWarsReloaded extends JavaPlugin implements PluginMessageListener
         } catch (final Exception e) {
             e.printStackTrace();
             this.getLogger().severe("Could not find support for this CraftBukkit version.");
-            this.getLogger().info("Check for updates at URL HERE");
+            this.getLogger().info("Check for updates at https://www.spigotmc.org/resources/skywarsreloaded-updated.36796/");
             this.setEnabled(false);
             return;
         }

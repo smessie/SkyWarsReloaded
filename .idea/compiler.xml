@@ -11,37 +11,14 @@
         <module name="skywarsreloadedplugin-v1_10_R1" />
         <module name="skywarsreloadedplugin-v1_11_R1" />
         <module name="skywarsreloadedplugin-v1_12_R1" />
-        <module name="skywarsreloadedplugin-v1_13_R1" />
         <module name="skywarsreloadedplugin-v1_7_R3" />
         <module name="skywarsreloadedplugin-v1_7_R4" />
         <module name="skywarsreloadedplugin-v1_8_R1" />
         <module name="skywarsreloadedplugin-v1_8_R2" />
         <module name="skywarsreloadedplugin-v1_8_R3" />
         <module name="skywarsreloadedplugin-v1_9_R2" />
-        <module name="v1_10_R1" />
-        <module name="v1_11_R1" />
-        <module name="v1_12_R1" />
-        <module name="v1_9_R2" />
+        <module name="skywarsreloadedpluginv1_13_R1" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="SkyWarsReloaded" target="1.5" />
-      <module name="SkyWarsReloadedPlugin" target="1.8" />
-      <module name="skywarsreloadedplugin-api" target="1.5" />
-      <module name="skywarsreloadedplugin-v1_10_R1" target="1.5" />
-      <module name="skywarsreloadedplugin-v1_11_R1" target="1.5" />
-      <module name="skywarsreloadedplugin-v1_12_R1" target="1.5" />
-      <module name="skywarsreloadedplugin-v1_13_R1" target="1.5" />
-      <module name="skywarsreloadedplugin-v1_7_R3" target="1.5" />
-      <module name="skywarsreloadedplugin-v1_7_R4" target="1.5" />
-      <module name="skywarsreloadedplugin-v1_8_R1" target="1.5" />
-      <module name="skywarsreloadedplugin-v1_8_R2" target="1.5" />
-      <module name="skywarsreloadedplugin-v1_8_R3" target="1.5" />
-      <module name="skywarsreloadedplugin-v1_9_R2" target="1.5" />
-      <module name="v1_10_R1" target="1.5" />
-      <module name="v1_11_R1" target="1.5" />
-      <module name="v1_12_R1" target="1.5" />
-      <module name="v1_9_R2" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
