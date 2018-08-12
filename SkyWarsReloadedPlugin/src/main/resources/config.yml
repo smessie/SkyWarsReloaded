@@ -177,12 +177,12 @@ gameItems:
 gameSounds:
   playerJoinLobby: ENTITY_SLIME_JUMP
   playerLeaveLobby: ENTITY_SLIME_ATTACK
-  playerDeath: ENTITY_LIGHTNING_THUNDER
-  playerWin: ENTITY_FIREWORK_LARGE_BLAST
+  playerDeath: ENTITY_LIGHTNING_BOLT_THUNDER
+  playerWin: ENTITY_FIREWORK_ROCKET_LARGE_BLAST
   opChestVote: BLOCK_CHEST_OPEN
   timeVote: ENTITY_TNT_PRIMED
   weatherVote: ENTITY_SPLASH_POTION_THROW
-  jumpVote: ENTITY_MAGMACUBE_JUMP
+  jumpVote: ENTITY_MAGMA_CUBE_JUMP
 lobbyGuard:
   enabled: false
   hungerDisabled: true
