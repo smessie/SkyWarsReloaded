@@ -7,6 +7,7 @@ import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
 import org.bukkit.World;
 import org.bukkit.FireworkEffect.Type;
+import org.bukkit.block.Biome;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -19,4 +20,5 @@ public interface NMS {
 	public FireworkEffect getFireworkEffect(Color one, Color two, Color three, Color four, Color five, Type type);
 	public void sendTitle(Player player, int fadein, int stay, int fadeout, String title, String subtitle);
 	public boolean isOnePointSeven();
+	public Biome getIcePlainsBiome();
 }

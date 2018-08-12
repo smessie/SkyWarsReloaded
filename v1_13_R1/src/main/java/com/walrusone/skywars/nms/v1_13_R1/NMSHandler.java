@@ -4,6 +4,7 @@ import net.minecraft.server.v1_13_R1.*;
 import org.bukkit.*;
 import org.bukkit.Chunk;
 import org.bukkit.Particle;
+import org.bukkit.block.Biome;
 import org.bukkit.craftbukkit.v1_13_R1.CraftChunk;
 import org.bukkit.craftbukkit.v1_13_R1.CraftServer;
 import org.bukkit.craftbukkit.v1_13_R1.entity.CraftPlayer;
@@ -68,5 +69,9 @@ public class NMSHandler
 
     public boolean isOnePointSeven() {
         return false;
+    }
+
+    public Biome getIcePlainsBiome() {
+        return Biome.SNOWY_TUNDRA;
     }
 }

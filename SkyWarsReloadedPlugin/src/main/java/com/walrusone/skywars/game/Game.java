@@ -1,26 +1,10 @@
 package com.walrusone.skywars.game;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Chunk;
-import org.bukkit.Color;
-import org.bukkit.Effect;
-import org.bukkit.FireworkEffect;
+import com.walrusone.skywars.SkyWarsReloaded;
+import com.walrusone.skywars.api.GameEndEvent;
+import com.walrusone.skywars.utilities.*;
+import org.bukkit.*;
 import org.bukkit.FireworkEffect.Type;
-import org.bukkit.GameMode;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.Sound;
-import org.bukkit.World;
-import org.bukkit.block.Biome;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
 import org.bukkit.block.DoubleChest;
@@ -33,20 +17,11 @@ import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.meta.FireworkMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import org.bukkit.scoreboard.DisplaySlot;
-import org.bukkit.scoreboard.Objective;
-import org.bukkit.scoreboard.Score;
-import org.bukkit.scoreboard.Scoreboard;
-import org.bukkit.scoreboard.ScoreboardManager;
+import org.bukkit.scoreboard.*;
 import org.bukkit.util.Vector;
 
-import com.walrusone.skywars.SkyWarsReloaded;
-import com.walrusone.skywars.api.GameEndEvent;
-import com.walrusone.skywars.utilities.BungeeUtil;
-import com.walrusone.skywars.utilities.EmptyChest;
-import com.walrusone.skywars.utilities.GlassColor;
-import com.walrusone.skywars.utilities.Messaging;
-import com.walrusone.skywars.utilities.StringUtils;
+import java.io.File;
+import java.util.*;
 
 
 public class Game {
@@ -1267,7 +1242,7 @@ public class Game {
         } else if (weather.equalsIgnoreCase("snow")) {
             for (int x = min; x < max; x++) {
                 for (int z = min; z < max; z++) {
-                    world.setBiome(x, z, Biome.ICE_PLAINS);
+                    world.setBiome(x, z, SkyWarsReloaded.getNMS().getIcePlainsBiome());
                 }
             }
             world.setStorm(true);

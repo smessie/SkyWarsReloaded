@@ -18,6 +18,7 @@ import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
 import org.bukkit.FireworkEffect.Type;
 import org.bukkit.World;
+import org.bukkit.block.Biome;
 import org.bukkit.craftbukkit.v1_8_R3.CraftChunk;
 import org.bukkit.craftbukkit.v1_8_R3.CraftServer;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
@@ -84,6 +85,10 @@ public class NMSHandler implements NMS {
 	
 	public boolean isOnePointSeven() {
 		return false;
-	} 
+	}
+
+	public Biome getIcePlainsBiome() {
+		return Biome.ICE_PLAINS;
+	}
 	
 }

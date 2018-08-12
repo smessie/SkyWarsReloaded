@@ -14,6 +14,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Chunk;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
+import org.bukkit.block.Biome;
 import org.bukkit.craftbukkit.v1_9_R2.CraftChunk;
 import org.bukkit.craftbukkit.v1_9_R2.CraftServer;
 import org.bukkit.craftbukkit.v1_9_R2.entity.CraftPlayer;
@@ -96,5 +97,9 @@ public void updateChunks(org.bukkit.World world, List<org.bukkit.Chunk> chunks)
   public boolean isOnePointSeven()
   {
     return false;
+  }
+
+  public Biome getIcePlainsBiome() {
+    return Biome.ICE_FLATS;
   }
 }

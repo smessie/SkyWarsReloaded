@@ -14,6 +14,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Chunk;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
+import org.bukkit.block.Biome;
 import org.bukkit.craftbukkit.v1_12_R1.CraftChunk;
 import org.bukkit.craftbukkit.v1_12_R1.CraftServer;
 import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
@@ -94,4 +95,8 @@ public void updateChunks(org.bukkit.World world, List<org.bukkit.Chunk> chunks)
   {
     return false;
   }
+
+    public Biome getIcePlainsBiome() {
+      return Biome.ICE_FLATS;
+    }
 }
