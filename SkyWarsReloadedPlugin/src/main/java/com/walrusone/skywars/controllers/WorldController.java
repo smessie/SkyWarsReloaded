@@ -38,11 +38,6 @@ public class WorldController {
             public boolean canSpawn(World world, int x, int z) {
                 return true;
             }
-            
-            @Override
-            public byte[] generate(World world, Random random, int x, int z) {
-                return new byte[32768];
-            }
     
             @Override
             public Location getFixedSpawnLocation(World world, Random random) {
