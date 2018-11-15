@@ -28,22 +28,7 @@ public class WorldController {
         WorldCreator worldCreator = new WorldCreator(name);
         worldCreator.environment(World.Environment.NORMAL);
         worldCreator.generateStructures(false);
-        worldCreator.generator(new ChunkGenerator() {
-            @Override
-        	public List<BlockPopulator> getDefaultPopulators(World world) {
-                return Arrays.asList(new BlockPopulator[0]);
-            }
-            
-            @Override
-            public boolean canSpawn(World world, int x, int z) {
-                return true;
-            }
-    
-            @Override
-            public Location getFixedSpawnLocation(World world, Random random) {
-                return new Location(world, 0.0D, 64.0D, 0.0D);
-            }
-        });
+        worldCreator.generator(SkyWarsReloaded.getNMS().getChunkGenerator());
 
         World world = worldCreator.createWorld();
         world.setDifficulty(Difficulty.NORMAL);
@@ -72,27 +57,7 @@ public class WorldController {
 		String isLobby = worldName.substring(0, Math.min(worldName.length(), 5));
 		WorldCreator worldCreator = new WorldCreator(worldName);
 		worldCreator.generateStructures(false);
-        worldCreator.generator(new ChunkGenerator() {
-            @Override
-        	public List<BlockPopulator> getDefaultPopulators(World world) {
-                return Arrays.asList(new BlockPopulator[0]);
-            }
-            
-            @Override
-            public boolean canSpawn(World world, int x, int z) {
-                return true;
-            }
-            
-            @Override
-            public byte[] generate(World world, Random random, int x, int z) {
-                return new byte[32768];
-            }
-    
-            @Override
-            public Location getFixedSpawnLocation(World world, Random random) {
-                return new Location(world, 0.0D, 64.0D, 0.0D);
-            }
-        });
+        worldCreator.generator(SkyWarsReloaded.getNMS().getChunkGenerator());
 		World world = worldCreator.createWorld();
         world.setDifficulty(Difficulty.NORMAL);
         world.setSpawnFlags(true, true);

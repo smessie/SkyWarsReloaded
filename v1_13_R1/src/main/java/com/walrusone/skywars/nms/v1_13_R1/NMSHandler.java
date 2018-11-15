@@ -4,15 +4,18 @@ import net.minecraft.server.v1_13_R1.*;
 import org.bukkit.*;
 import org.bukkit.Chunk;
 import org.bukkit.Particle;
+import org.bukkit.World;
 import org.bukkit.block.Biome;
 import org.bukkit.craftbukkit.v1_13_R1.CraftChunk;
 import org.bukkit.craftbukkit.v1_13_R1.CraftServer;
 import org.bukkit.craftbukkit.v1_13_R1.entity.CraftPlayer;
 import org.bukkit.craftbukkit.v1_13_R1.inventory.CraftItemStack;
 import org.bukkit.entity.Player;
+import org.bukkit.generator.ChunkGenerator;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
 public class NMSHandler
         implements com.walrusone.skywars.api.NMS {
@@ -73,5 +76,20 @@ public class NMSHandler
 
     public Biome getIcePlainsBiome() {
         return Biome.SNOWY_TUNDRA;
+    }
+
+    public org.bukkit.generator.ChunkGenerator getChunkGenerator() {
+        return new org.bukkit.generator.ChunkGenerator() {
+            @Override
+            public final org.bukkit.generator.ChunkGenerator.ChunkData generateChunkData(final World world, final Random random, final int x, final int z, final org.bukkit.generator.ChunkGenerator.BiomeGrid chunkGererator) {
+                final ChunkGenerator.ChunkData chunkData = this.createChunkData(world);
+                for (int i = 0; i < 16; i++) {
+                    for (int j = 0; j < 16; j++) {
+                        chunkGererator.setBiome(i, j, Biome.THE_VOID);
+                    }
+                }
+                return chunkData;
+            }
+        };
     }
 }

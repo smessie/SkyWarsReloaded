@@ -6,7 +6,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  <version>3.2.1</version>
+  <version>3.3.1</version>
 
    <build>
        <finalName>SkyWarsReloaded</finalName>
@@ -168,6 +168,14 @@
            <groupId>com.walrusone.skywars</groupId>
            <artifactId>skywarsreloadedplugin-v1_13_R1</artifactId>
            <version>v1_13_R1</version>
+           <scope>compile</scope>
+           <type>jar</type>
+           <optional>true</optional>
+       </dependency>
+       <dependency>
+           <groupId>com.walrusone.skywars</groupId>
+           <artifactId>skywarsreloadedplugin-v1_13_R2</artifactId>
+           <version>v1_13_R2</version>
            <scope>compile</scope>
            <type>jar</type>
            <optional>true</optional>
