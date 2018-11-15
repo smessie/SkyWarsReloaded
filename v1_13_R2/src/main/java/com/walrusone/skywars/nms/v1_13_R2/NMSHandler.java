@@ -1,4 +1,4 @@
-package v1_13_R2;
+package com.walrusone.skywars.nms.v1_13_R2;
 
 import net.minecraft.server.v1_13_R2.*;
 import org.bukkit.*;
