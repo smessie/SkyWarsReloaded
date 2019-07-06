@@ -181,6 +181,14 @@
            <optional>true</optional>
        </dependency>
        <dependency>
+           <groupId>com.walrusone.skywars</groupId>
+           <artifactId>skywarsreloadedplugin-v1_14_R1</artifactId>
+           <version>v1_14_R1</version>
+           <scope>compile</scope>
+           <type>jar</type>
+           <optional>true</optional>
+       </dependency>
+       <dependency>
            <groupId>me.clip</groupId>
            <artifactId>placeholderapi</artifactId>
            <version>2.0.8</version>
